@@ -1,0 +1,104 @@
+<!-- ?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $date = htmlspecialchars($_POST['date']);
+    $pax = htmlspecialchars($_POST['pax']);
+
+    // Save the data (e.g., into a database or send via email)
+    $message = "Booking Details:\nName: $name\nEmail: $email\nDate: $date\nNumber of People: $pax";
+
+    // Feedback to user
+    $confirmation = "Booking Confirmed! Details: $message";
+}
+?-->
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Booking Page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Explore the Best Tours</h1>
+    </header>
+
+    <main>
+        <!-- Collage Section -->
+        <section class="image-collage">
+            <h2>Tour Highlights</h2>
+            <div class="collage-grid">
+                <div class="collage-item">
+                    <img src="https://ik.imagekit.io/tvlk/blog/2024/10/shutterstock_2416671753-1.jpg?tr=dpr-2,w-675" alt="baguio-cathedral">
+                    <p>The Baguio Cathedral of Our Lady of the Atonement</p>
+                </div>
+                <div class="collage-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Diplomat_Hotel_-_front_%28Dominican_Hill%2C_Baguio%2C_Benguet%29%282018-11-27%29.JPG" alt="diplomat">
+                    <p>Diplomat Hotel</p>
+                </div>
+                <div class="collage-item">
+                    <img src="https://www.takeyouhere.com/wp-content/uploads/2024/04/20230514_072145.jpg" alt="mirador">
+                    <p>Mirador Eco Park</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <!-- Booking Section -->
+            <section class="booking-section">
+                <h2>Book Your Tour</h2>
+                <!--?php if (!empty($confirmation)): ?-->
+                    <p class="confirmation"><!--?php echo $confirmation; ?--></p>
+                <!--?php endif; ?-->
+                <form id="bookingForm" method="POST" action="">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required="">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required="">
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required="">
+
+                    <label for="pax">Number of People (Pax):</label>
+                    <input type="number" id="pax" name="pax" min="1" required="">
+
+                    <button type="submit">Book Now</button>
+                </form>
+            </section>
+
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <div class="package-details">
+                    <h3>Package Details</h3>
+                    <ul>
+                        <li>5 Days, 4 Nights</li>
+                        <li>Accommodation Included</li>
+                        <li>Breakfast and Dinner</li>
+                        <li>Guided Tours</li>
+                    </ul>
+                </div>
+
+                <div class="itinerary">
+                    <h3>Itinerary</h3>
+                    <ul>
+                        <li><strong>Day 1:</strong> Arrival and Welcome Dinner</li>
+                        <li><strong>Day 2:</strong> Sightseeing and Adventure Activities</li>
+                        <li><strong>Day 3:</strong> Cultural Exploration</li>
+                        <li><strong>Day 4:</strong> Relaxation</li>
+                        <li><strong>Day 5:</strong> Departure</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>2024 Intayu. All rights reserved.</p>
+    </footer>
+
+    <script src="booking.js"></script>
+
+
+</body></html>

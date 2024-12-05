@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #444;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background-color: #61a382;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Collage Section */
+.image-collage {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.image-collage h2 {
+    margin-bottom: 20px;
+}
+
+.collage-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.collage-item {
+    flex: 1;
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.collage-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.collage-item p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.booking-section {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.booking-section form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.booking-section form input, 
+.booking-section form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.booking-section form button {
+    background-color: #8fbea7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-section form button:hover {
+    background-color: #5ca07e;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #51886d;
+    color: white;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}

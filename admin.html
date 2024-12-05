@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Page: Upload Images</h1>
+    <form id="uploadForm">
+      <label for="imageTitle">Image Title:</label>
+      <input type="text" id="imageTitle" placeholder="Enter image title" required>
+
+      <label for="imageDescription">Image Description:</label>
+      <input type="text" id="imageDescription" placeholder="Enter image description" required>
+
+
+      <label for="imageFile">Select Image:</label>
+      <input type="file" id="imageFile" accept="image/*" required>
+
+      <button type="submit">Upload and Post</button>
+    </form>
+    
+    <h2>Posted Images</h2>
+    <div id="postedImages" class="posted-images"></div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
